@@ -1,27 +1,37 @@
+var min = document.querySelector('#minuets').value
+var mininput = document.querySelector('#minuets')
+var sec = document.querySelector('#seconds').value
+var secinput = document.querySelector('#seconds')
+var clockMin=document.querySelector('#clockmin')
+var clocksec=document.querySelector('#clocksec')
 var loadingLogo=document.querySelector('#loading')
+mininput.onchange=function(){
+  clockmin.innerText=mininput.value+":"
+}
+secinput.onchange=function(){
+  secinput.value<10?
+  clocksec.innerText="0"+secinput.value:clocksec.innerText=secinput.value;
+}
 async function fetchCats() {
     var img = await fetch("https://aws.random.cat/meow");
     var json = await img.json();
     document.querySelector('img').src=json.file
-    document.querySelector('#loading').style.display='none'
+      document.querySelector('#loading').style.display='none'
 }
-
+    
 var countdown = function(){
-    var min = document.querySelector('#minuets').value
-    var sec = document.querySelector('#seconds').value
-    var clock=document.querySelector('#clockmin')
-   
+  min = document.querySelector('#minuets').value
+  sec = document.querySelector('#seconds').value
     var intervalId=setInterval(function(){
     sec = sec-1
     if(sec <0){  
         min=min-1
         sec = 59
     }
-    clock.innerHTML=(min)+':'+(sec)
-    if(sec<10){
-        clock.innerHTML=(min)+':'+"0"+(sec)
-    }
-    var stopCount = function() {
+    clockmin.innerHTML=(min)+':'
+    clocksec.innerHTML=sec
+    min<10?(clockMin.innerText="0"+min+":"):min+":"; sec<10?clocksec.innerText="0"+sec:sec
+    var stopCount = function() {  
         clearInterval(intervalId);
     
       }
