@@ -1,120 +1,138 @@
-#timer{
+#timer {
   background-image: url(https://i.pinimg.com/originals/f1/1a/aa/f11aaa9be1edaa1eb95a962aefa1d413.jpg);
+  background-size: cover;
 }
-  #minuets{
-      width: 97%;
-    }
-    #minutesSquare{
-      display: grid;
-      width:8%;
-      /* border-style: groove; */
-      margin-left: 27%;
-    }
-    #head{
-      display: flex;
-    }
-    #seconds{
-      width: 96%;
-    }
-#secondsSquare{
-  margin-left: 37%;
+#minuets {
+  width: 97%;
+}
+#minutesSquare {
   display: grid;
-  width:8%;
-  /* border-style: groove;  */
+  width: 8%;
+  /* border-style: groove; */
+  margin-left: 20%;
 }
-#clocksec{
-  margin-left: 1%;
-margin-top: 160px;
-font-size: 150px;
-font-family: fantasy;
-color:#eaabda;
-}
-#clockmin{
-margin-left: 40%;
-margin-top: 160px;
-font-size: 150px;
-font-family: fantasy;
-color:#eaabda;
-}
-.input{
-    font-family: fantasy;
-    width: 35%;
-    margin-top: 87px;
-    height: 80px;
-    font-size: 35px;
-    border-radius: 25%;
-    text-align: center;
-  }
-.inputHeadSeconds{
-    font-family: fantasy;
-    width: 12%;
-
-    height: 40px;
-    font-size: 35px;
-}
-.inputHeadMinutes{
-    font-family: fantasy;
-    width: 12%;
-
-    height: 40px;
-    font-size: 35px;
-}
-#catImage{
-    width: 80%;
-    margin-left: 10%;
-    display: none;
-    height: 900PX;
-}
-.loading{
-    margin-left: 10%;
-}
-#stop,#pause,#start{  
-  margin-left: 22%;
-    background-color: aqua;
-    font-family: cursive;
-    border-radius: 41%;
-    font-size: 60px;;
-  }
-#buttons{
+#head {
   display: flex;
 }
-.button{
-    margin-left: 14%;
-    margin-top: 12%;
-    width: 7%;
-    height: 100px;
-    font-size: 30px;
-    margin-bottom: 7%;
-  }
+#seconds {
+  width: 96%;
+}
+#secondsSquare {
+  margin-left: 30%;
+  display: grid;
+  width: 8%;
+  /* border-style: groove;  */
+}
+#clocksec {
+  margin-left: 1%;
+  margin-top: 160px;
+  font-size: 150px;
+  font-family: fantasy;
+  color: #eaabda;
+}
+#clockmin {
+  margin-left: 40%;
+  margin-top: 160px;
+  font-size: 150px;
+  font-family: fantasy;
+  color: #eaabda;
+}
+.input {
+  font-family: fantasy;
+  width: 35%;
+  margin-top: 87px;
+  height: 80px;
+  font-size: 35px;
+  border-radius: 25%;
+  text-align: center;
+}
+.inputHeadSeconds {
+  font-family: fantasy;
+  width: 12%;
+
+  height: 40px;
+  font-size: 35px;
+}
+.inputHeadMinutes {
+  font-family: fantasy;
+  width: 12%;
+
+  height: 40px;
+  font-size: 35px;
+}
+#catImage {
+  width: 80%;
+  margin-left: 10%;
+  display: none;
+  height: 900px;
+}
+.loading {
+  margin-left: 10%;
+}
+#stop,
+#pause,
+#start {
+  margin-left: 22%;
+  background-color: aqua;
+  font-family: cursive;
+  border-radius: 41%;
+  font-size: 60px;
+}
+#buttons {
+  display: flex;
+}
+.button {
+  margin-left: 14%;
+  margin-top: 12%;
+  width: 7%;
+  height: 100px;
+  font-size: 30px;
+  margin-bottom: 7%;
+}
 .lds-hourglass {
-    display: none;
-    position: relative;
-    width: 80px;
-    height: 80px;
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(17, 2, 2);
+  border-color: rgb(14, 4, 4) transparent rgb(20, 8, 8) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  .lds-hourglass:after {
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    width: 0;
-    height: 0;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 32px solid rgb(17, 2, 2);
-    border-color: rgb(14, 4, 4) transparent rgb(20, 8, 8) transparent;
-    animation: lds-hourglass 1.2s infinite;
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  @keyframes lds-hourglass {
-    0% {
-      transform: rotate(0);
-      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    }
-    50% {
-      transform: rotate(900deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    100% {
-      transform: rotate(1800deg);
-    }
+  100% {
+    transform: rotate(1800deg);
   }
-  
+}
+@media screen and (max-width: 650px) {
+  #clockmin,
+  #clocksec {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .button {
+    font-size: 20px;
+  }
+  #stop,
+  #pause,
+  #start {
+    font-size: 20px;
+  }
+}
