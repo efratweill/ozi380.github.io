@@ -49,6 +49,7 @@ margin-left: 694px;
 #catImage{
     width: 80%;
     margin-left: 10%;
+    display: none;
     height: 900PX;
 }
 .loading{
@@ -61,10 +62,11 @@ margin-top: 160px;
 font-size: 128px;
 font-family: cursive;
 } */
-#stop,#pause,#start{
-  margin-left: 14%;
+#stop,#pause,#start{  
+  margin-left: 22%;
     background-color: aqua;
     font-family: cursive;
+    border-radius: 41%
 }
 #buttons{
   display: flex;
@@ -72,7 +74,7 @@ font-family: cursive;
 .button{
     margin-left: 14%;
     margin-top: 10%;
-    width: 260px;
+    width: 6%;
     height: 45px;
     font-size: 30px;
 }
