@@ -9,23 +9,27 @@
 <body>
     <img id="catImage" src="" alt="" style="display:none">
     <div class="lds-hourglass" id="loading"></div>
-<timer>
-    <span class="inputHeadMinutes">minutes</span>
-    <span class="inputHeadSeconds">Seconds</span><br>
-    <input type="number" class="input" id="minuets" placeholder="Minutes" >
-    <input type="number" class="input" id="seconds" placeholder="Seconds">
-    <div id="clockset"> <br>
-    <br>
-    
+<div id="timer">
+   <div id="head"> 
+        <div id="minutesSquare">
+            <div class="inputHeadMinutes">Minutes</div>
+            <input type="number" class="input" id="minuets" placeholder="Min" >
+        </div>
+
+        <div id="secondsSquare">
+            <div class="inputHeadSeconds">Seconds</div>
+            <input type="number" class="input" id="seconds" placeholder="Sec">
+        </div>
+    </div>
     <span id="clockmin" class="clock" >00:</span> <span id="clocksec" class="clock">00</span> 
-    <!-- <span id="clocksec" class="clock">30</span> -->
     <div> 
+        
 <div id="buttons">
-    <button class="button" id="start">Start</button>
-    <button class="button" id="pause">Pause</button>
-    <button class="button" id="stop">Stop</button>
+    <button class="button" id="start">></button>
+    <button class="button" id="pause">\\</button>
+    <button class="button" id="stop">x</button>
 </div>
-</timer>
+</div>
 
     <script src="countDown.js"></script>
 </body> 

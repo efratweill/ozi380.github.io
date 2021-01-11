@@ -68,7 +68,7 @@ var countdown = function(){
       document.querySelector('#loading').style.display='inline-block'
       fetchCats();
       stopCount();  
-      document.querySelector('timer').style.display="none"
+      document.querySelector('#timer').style.display="none"
     }
     stopButton.addEventListener('click',stopCount)
           pauseButton.addEventListener('click',pauseCount)
